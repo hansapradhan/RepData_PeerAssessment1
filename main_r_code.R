@@ -6,7 +6,7 @@ data <- read.csv("activity.csv")
 ##2.Histogram of the total number of steps taken each day
 ##-----------------------------------------------------------------
 library(ggplot2)
-Q2<-data.frame(tapply(activity$steps,activity$date,sum,na.rm=TRUE))
+Q2<-data.frame(tapply(data$steps,data$date,sum,na.rm=TRUE))
 Q2$date<-rownames(Q2)
 rownames(Q2)<-NULL
 names(Q2)[[1]]<-"Total Steps"
